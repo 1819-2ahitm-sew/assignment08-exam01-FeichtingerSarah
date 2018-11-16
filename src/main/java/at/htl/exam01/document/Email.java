@@ -17,6 +17,6 @@ public class Email extends Document {
 
     public String toString()
     {
-        return toSting() + " " + empfeanger;
+        return toSting() + " an '" + empfeanger + "'";
     }
 }

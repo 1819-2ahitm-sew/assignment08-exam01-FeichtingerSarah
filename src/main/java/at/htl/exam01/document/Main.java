@@ -31,19 +31,34 @@ public class Main {
         Email email = new Email("Susi", "Bewerbung", "Cool Company");
 
         document [0] = buch1;
-        document [1] = buch2;
-        document [2] = email;
+        document [1] = email;
+        document [2] = buch2;
+
+        ausgabe(document);
     }
 
 
     public static void ausgabe(Document [] document)
     {
+        int buechercounter = 0;
+        int emailcounter = 0;
+
         for (int i = 0; i < document.length; i++) {
             if (document [i] instanceof Buch)
             {
-                System.out.println("Buch: " + );
+                System.out.println("Book: " + document[i]);
+                buechercounter++;
+            }
+            else
+            {
+                System.out.println("E-Mail: " + document[i]);
+                emailcounter++;
             }
         }
+
+        System.out.println();
+        System.out.println("Anzahl Books: " + buechercounter);
+        System.out.println("Anzahl E-Mails: " + emailcounter);
     }
 
 

@@ -48,7 +48,7 @@ public class StringCompress {
         String ziffern = "";
         int zahl = 3;
         int counter = 0;
-
+        String zeichenUmwandlung = "";
         String [] liste = new String[getNoOfLines(fileName)];
 
         try (Scanner scanner = new Scanner(new FileReader(fileName))) {
@@ -57,18 +57,16 @@ public class StringCompress {
                 zeichenkette = scanner.next();
 
                 zeichen = zeichenkette.charAt(0);
+                ziffern = zeichenkette.substring(1);
 
-                for (int i = 1; i <= zeichenkette.length(); i++) {
-                    ziffern = ziffern + zeichenkette.charAt(i);
-                }
-
-                //zahl = zeichen
-
-                //.subString(1)
+                //zahl = ziffern
 
                 for (int i = 0; i < zahl; i++) {
-                    liste [counter] = liste[counter] + zeichen;
+                    liste[counter] = liste[counter] + zeichen;
                 }
+
+                System.out.println(liste[counter]);
+
 
                 counter++;
             }

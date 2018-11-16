@@ -18,6 +18,6 @@ public abstract class Document {
 
     public String toSting()
     {
-        return autor + " " + titel;
+        return "'" + titel + "' von '" + autor + "'";
     }
 }
