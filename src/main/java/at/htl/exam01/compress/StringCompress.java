@@ -42,11 +42,10 @@ public class StringCompress {
      * @return String-Array mit dem entpacktem Text
      */
     public String[] readFromFile(String fileName) {
-        boolean intOrString = false;
         char zeichen;
         String zeichenkette;
         String ziffern = "";
-        int zahl = 3;
+        int zahl;
         int counter = 0;
         String zeichenUmwandlung = "";
         String [] liste = new String[getNoOfLines(fileName)];
@@ -59,9 +58,11 @@ public class StringCompress {
                 zeichen = zeichenkette.charAt(0);
                 ziffern = zeichenkette.substring(1);
 
-                //zahl = ziffern
+               zahl = Integer.parseInt(ziffern);
 
-                for (int i = 0; i < zahl; i++) {
+                liste[counter] = zeichen + "";
+
+                for (int i = 1; i < zahl; i++) {
                     liste[counter] = liste[counter] + zeichen;
                 }
 
