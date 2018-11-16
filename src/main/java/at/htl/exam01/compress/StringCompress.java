@@ -18,7 +18,7 @@ public class StringCompress {
     public static void main(String[] args) {
         StringCompress sc = new StringCompress();
         String[] text = sc.readFromFile(FILE_NAME);
-        sc.print(text);
+        //sc.print(text);
     }
 
 
@@ -60,16 +60,20 @@ public class StringCompress {
 
                zahl = Integer.parseInt(ziffern);
 
-                liste[counter] = zeichen + "";
+                /*liste[counter] = zeichen + "";
 
                 for (int i = 1; i < zahl; i++) {
                     liste[counter] = liste[counter] + zeichen;
                 }
 
                 System.out.println(liste[counter]);
+                */
 
+                print(liste, counter, zahl, zeichen);
 
                 counter++;
+
+
             }
 
         } catch (FileNotFoundException e) {
@@ -87,10 +91,15 @@ public class StringCompress {
      *
      * @param lines String-Array
      */
-    public void print(String[] lines) {
-        for (int i = 0; i < lines.length; i++) {
+    public void print(String[] liste, int counter, int zahl, char zeichen) {
 
-        }
+        liste[counter] = zeichen + "";
+            for (int j = 1; j < zahl; j++) {
+                liste[counter] = liste[counter] + zeichen;
+            }
+
+
+        System.out.println(liste[counter]);
     }
 
 
