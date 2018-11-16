@@ -91,6 +91,8 @@ public class StringCompress {
      *
      * @param lines String-Array
      */
+
+    //Die Medthode ist etwas anders und mein lines heißt liste, deswegen sind die Tests nicht ausführbar
     public void print(String[] liste, int counter, int zahl, char zeichen) {
 
         liste[counter] = zeichen + "";
