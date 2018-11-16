@@ -1,5 +1,6 @@
 package at.htl.exam01.document;
 
+
 public class Main {
 
     /**
@@ -23,7 +24,26 @@ public class Main {
      */
     public static void main(String[] args) {
 
+        Document [] document = new Document[3];
 
+        Buch buch1 = new Buch ("Rowlings", "Harry Potter und der Stein der Weisen");
+        Buch buch2 = new Buch("Tolkien", "LordOfRings");
+        Email email = new Email("Susi", "Bewerbung", "Cool Company");
+
+        document [0] = buch1;
+        document [1] = buch2;
+        document [2] = email;
+    }
+
+
+    public static void ausgabe(Document [] document)
+    {
+        for (int i = 0; i < document.length; i++) {
+            if (document [i] instanceof Buch)
+            {
+                System.out.println("Buch: " + );
+            }
+        }
     }
 
 
